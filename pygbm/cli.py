@@ -43,24 +43,6 @@ def simulate(y0, mu, sigma, T, N, output):
 def main():
     """
     Main function for the CLI tool.
-
-    :param y0: Starting location of the simulation.
-    :type y0: float
-
-    :param mu: The drift of the simulation.
-    :type mu: float
-
-    :param sigma: The diffusion of the simulation.
-    :type sigma: float
-
-    :param T: The lenght of time should the program simulate.
-    :type T: float or None
-
-    :param N: The number of simualtion steps.
-    :type N: float or None
-
-    :param output: The location the file will be saved in.
-    :type output: str or None
     """
     parser = argparse.ArgumentParser(description="pygbm CLI Tool")
     subparsers = parser.add_subparsers(dest="command")
