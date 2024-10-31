@@ -28,3 +28,12 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Add your module's path to `sys.path`
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))  # Point to your project source code
+
+# Get the current directory
+current_dir = os.getcwd()
+print(f"Current directory: {current_dir}")

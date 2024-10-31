@@ -19,6 +19,7 @@ To create a simulation in a python script the ``GBMSimulator`` class must be use
 
 .. automodule:: pygbm.gbm_simulator.GBMSimulator
     :members:
+    :undoc-members:
 
 
 For example:
