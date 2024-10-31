@@ -17,7 +17,7 @@ Run a simulation in the CLI
 
 To create a simulation in the CLI, the following methods are used:
 
-.. automodule:: pygbm
+.. automodule:: pygbm.cli
     :members:
     :undoc-members:
 
