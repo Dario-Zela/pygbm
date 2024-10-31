@@ -18,7 +18,7 @@ extensions = ["sphinx.ext.duration",
             "sphinx.ext.autodoc",
             "sphinx.ext.autosummary",
             "sphinx_rtd_theme",
-            "recommonmark "]
+            "recommonmark"]
 
 templates_path = ['_templates']
 exclude_patterns = []
