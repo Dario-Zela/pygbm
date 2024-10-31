@@ -7,7 +7,7 @@ It can be used as a python package by importing it, as shown in the test, or it 
 
 ## Installation
 
-Download the pygbm reposatory and use `pip install /`.
+Download the pygbm repo and use `pip install /`.
 
 ## Usage
 The class GBMSimulator is initialised with the starting location, the drift and the diffusion of the system, and then the method simulate_path can be run to get the path.
