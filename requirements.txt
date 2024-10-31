@@ -4,3 +4,4 @@ numpy
 matplotlib
 argparse
 m2r2
+readthedocs-sphinx-ext
