@@ -65,7 +65,7 @@ def main():
     parser = argparse.ArgumentParser(description="pygbm CLI Tool")
     subparsers = parser.add_subparsers(dest="command")
 
-    # Sub-command for displaying company info
+    # Sub-command to start the simulation
     parser_info = subparsers.add_parser("simulate", help="Simulate Geometric Brownian motion")
     parser_info.add_argument("--y0", type=float, required=True, help="Starting location of the simulation")
     parser_info.add_argument("--mu", type=float, required=True, help="The drift")
@@ -76,6 +76,7 @@ def main():
 
     args = parser.parse_args()
 
+    #Run the simulation
     if args.command == "simulate":
         simulate(args.y0, args.mu, args.sigma, args.T, args.N, args.output)
 

@@ -17,7 +17,8 @@ Run a simulation
 
 To create a simulation in a python script the ``GBMSimulator`` class must be used:
 
-.. autofunction:: GBMSimulator
+.. automodule:: GBMSimulator
+    :members:
 
 The 
 

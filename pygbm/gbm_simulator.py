@@ -47,12 +47,23 @@ class GBMSimulator:
         :param sigma: The diffusion of the simulation.
         :type sigma: float
         """
-
+        #Store the simulation parameters as attributes of the class
         self.y0 = y0
         self.mu = mu
         self.sigma = sigma
 
     def browninan(self, dt, N_steps):
+        """
+        Creates the browninan noise used in the simulation
+
+        :param dt: The length of time between time steps.
+        :type dt: float
+
+        :param N_steps: The total number of time steps.
+        :type N_steps: float
+        """
+        
+        #Produce the brownian noise and return it
         B = np.random.normal(0, np.sqrt(dt), size=N_steps)
         return B
 
@@ -67,8 +78,15 @@ class GBMSimulator:
         :type N: float
         """
         
+        #Get the time step
         dt = T_Final / N_steps
+
+        #Calculate the change in y between each time step
         Y = np.exp((self.mu - self.sigma ** 2 / 2) * dt + self.sigma * self.browninan(dt, N_steps))
+
+        #"Add" the changes by multiplying them.
         Y = self.y0 * np.cumprod(Y)
+
+        #Get the time passed in the simulation.
         T = np.linspace(0, T_Final, N_steps)
         return T, Y
