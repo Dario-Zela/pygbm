@@ -25,6 +25,7 @@ To create a simulation in a python script the ``GBMSimulator`` class must be use
 For example:
 
 .. code-block:: python
+    
     from pygbm.gbm_simulator import GBMSimulator
     import matplotlib.pyplot as plt
 
@@ -54,7 +55,7 @@ Run a simulation in the CLI
 
 To create a simulation in the CLI, the following methods are used:
 
-.. automodule:: company.cli
+.. automodule:: pygbm.cli
     :members:
     :undoc-members:
 
