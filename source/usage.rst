@@ -17,13 +17,15 @@ Run a simulation
 
 To create a simulation in a python script the ``GBMSimulator`` class must be used:
 
-.. automodule:: pygbm.gbm_simulator.GBMSimulator
+.. automodule:: pygbm.gbm_simulator
     :members:
 
-The 
 
 For example:
 
 >>> import lumache
 >>> lumache.get_random_ingredients()
 ['shells', 'gorgonzola', 'parsley']
+
+Run a simulation in the CLI
+----------------
