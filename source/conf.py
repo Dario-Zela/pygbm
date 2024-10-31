@@ -23,6 +23,7 @@ extensions = ["sphinx.ext.duration",
 templates_path = ['_templates']
 exclude_patterns = []
 
+source_suffix = ['.rst', '.md']
 
 
 # -- Options for HTML output -------------------------------------------------
