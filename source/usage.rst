@@ -17,7 +17,7 @@ Run a simulation
 
 To create a simulation in a python script the ``GBMSimulator`` class must be used:
 
-.. automodule:: pygbm.gbm_simulator
+.. automodule:: gbm_simulator
     :members:
 
 
