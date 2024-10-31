@@ -9,7 +9,7 @@ T = 1.0
 N = 100
 
 # Initialize simulator
-simulator = GBMSimulator(y0, mu, sigma )
+simulator = GBMSimulator(y0, mu, sigma)
 
 # Simulate path
 t_values, y_values = simulator.simulate_path(T, N)
