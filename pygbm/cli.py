@@ -19,7 +19,7 @@ def simulate(y0, mu, sigma, T, N, output):
     :type T: float or None
 
     :param N: The number of simualtion steps.
-    :type N: float or None
+    :type N: int or None
 
     :param output: The location the file will be saved in.
     :type output: str or None
@@ -53,7 +53,7 @@ def main():
     parser_info.add_argument("--mu", type=float, required=True, help="The drift")
     parser_info.add_argument("--sigma", type=float, required=True, help="The diffusion")
     parser_info.add_argument("--T", type=float, default=10, help="What lenght of time should the program simulate")
-    parser_info.add_argument("--N", type=float, default=100, help="The number of simualtion steps")
+    parser_info.add_argument("--N", type=int, default=100, help="The number of simualtion steps")
     parser_info.add_argument("--output", type=str, default="output.png", help="Where should the simualtion be saved in")
 
     args = parser.parse_args()

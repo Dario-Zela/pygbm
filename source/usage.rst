@@ -6,11 +6,18 @@ Usage
 Installation
 ------------
 
-To use pygbm, first install it using pip:
+To use pygbm, first install the repo:
 
 .. code-block:: console
 
-   (.venv) $ pip install pygbm
+   (.venv) ~$ git clone https://github.com/Dario-Zela/pygbm.git
+
+Then install it:
+
+.. code-block:: console
+
+   (.venv) ~$ cd pygbm
+   (.venv) ~/pygbm$ pip install -e .
 
 Run a simulation in the CLI
 ----------------
