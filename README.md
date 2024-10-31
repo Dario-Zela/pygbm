@@ -48,7 +48,7 @@ pygbm simulate --y0 1.0 --mu 0.05 --sigma 0.2 --T 1.0 --N 100 -- output gbm_plot
 ## Documentation
 
 To change
-Link to the [documentation page](https://your-readthedocs-url-here).
+Link to the [documentation page](https://pygbmdariodis2024.readthedocs.io/en/latest/#).
 
 ## Contributing
 
