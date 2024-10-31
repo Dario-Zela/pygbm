@@ -14,6 +14,7 @@ Download the pygbm reposatory and use `pip install /`.
 
 ## Documentation
 
+To change
 Link to the [documentation page](https://your-readthedocs-url-here).
 
 ## Contributing
@@ -22,4 +23,4 @@ Contributions via pull requests are welcome!
 
 ## License
 
-<description of the license>
+MIT Licence
