@@ -4,4 +4,4 @@ API
 .. autosummary::
    :toctree: generated
 
-   pygbm
+   pygbm.gbm_simulator
