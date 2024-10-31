@@ -1,6 +1,6 @@
 import argparse
 import matplotlib.pyplot as plt
-from gbm_simulator import GBMSimulator
+from pygmb.gbm_simulator import GBMSimulator
 
 def simulate(y0, mu, sigma, T, N, output):
     """
