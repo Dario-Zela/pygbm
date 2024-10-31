@@ -56,4 +56,4 @@ Contributions via pull requests are welcome!
 
 ## License
 
-MIT Licence
+This project is licensed under the MIT License - see the LICENSE file for details.
