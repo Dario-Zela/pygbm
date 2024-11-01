@@ -60,7 +60,7 @@ class GBMSimulator:
         :type dt: float
 
         :param N_steps: The total number of time steps.
-        :type N_steps: float
+        :type N_steps: int
         """
         
         #Produce the brownian noise and return it
@@ -69,20 +69,23 @@ class GBMSimulator:
 
     def simulate_path(self, T_Final, N_steps):
         """
-        Runs the simulation on the input given by the user
+        Runs the simulation on the input given by the user, using analytical solution
         
-        :param T: The lenght of time should the program simulate.
-        :type T: float
+        :param T_Final: The lenght of time should the program simulate.
+        :type T_Final: float
 
-        :param N: The number of simualtion steps.
-        :type N: float
+        :param N_steps: The number of simualtion steps.
+        :type N_steps: int
         """
         
         #Get the time step
         dt = T_Final / N_steps
 
         #Calculate the change in y between each time step
-        Y = np.exp((self.mu - self.sigma ** 2 / 2) * dt + self.sigma * self.browninan(dt, N_steps))
+        Y = np.exp((self.mu - self.sigma ** 2 / 2) * dt + self.sigma * self.browninan(dt, N_steps - 1))
+
+        #Add a 1 at the beginning to start from y0
+        Y = np.hstack((np.array([1]), Y))
 
         #"Add" the changes by multiplying them.
         Y = self.y0 * np.cumprod(Y)
@@ -90,3 +93,66 @@ class GBMSimulator:
         #Get the time passed in the simulation.
         T = np.linspace(0, T_Final, N_steps)
         return T, Y
+
+    def simulate_path_euler(self, T_Final, N_steps):
+        """
+        Runs the simulation on the input given by the user, using Euler-Maruyama method
+        
+        :param T_Final: The lenght of time should the program simulate.
+        :type T_Final: float
+
+        :param N_steps: The number of simualtion steps.
+        :type N_steps: int
+        """
+        
+        #Get the time step
+        dt = T_Final / N_steps
+
+        #Get dB(t)
+        dB = self.browninan(dt, N_steps - 1)
+
+        #Create Y array
+        Y = [self.y0]
+
+        #Use the Euler-Maruyama method
+        for i in range(N_steps - 1):
+            Y.append(Y[i] + self.mu * Y[i] * dt + self.sigma * Y[i] * dB[i])
+
+        #Get the time passed in the simulation.
+        T = np.linspace(0, T_Final, N_steps)
+
+        return T, np.array(Y)
+
+    def simulate_path_milstein(self, T_Final, N_steps):
+        """
+        Runs the simulation on the input given by the user, using Milstein method
+        
+        :param T_Final: The lenght of time should the program simulate.
+        :type T_Final: float
+
+        :param N_steps: The number of simualtion steps.
+        :type N_steps: int
+        """
+        
+        #Get the time step
+        dt = T_Final / N_steps
+
+        #Get dB(t)
+        dB = self.browninan(dt, N_steps - 1)
+
+        #Create Y array
+        Y = [self.y0]
+
+        #Use the Milstein method
+        for i in range(N_steps - 1):
+            Y.append(
+                Y[i] +
+                self.mu * Y[i] * dt + 
+                self.sigma * Y[i] * dB[i] +
+                1/2.0 * self.sigma ** 2 * Y[i] * (dB[i] ** 2 - dt)
+                )
+
+        #Get the time passed in the simulation.
+        T = np.linspace(0, T_Final, N_steps)
+
+        return T, np.array(Y)

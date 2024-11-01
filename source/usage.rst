@@ -32,7 +32,7 @@ In the console this can be used via:
 
 .. code-block:: console
 
-   (.venv) $ pygbm simulate --y0 1.0 --mu 0.05 --sigma 0.2 --T 1.0 --N 100 --output gbm_plot.png
+   (.venv) $ pygbm euler --y0 1.0 --mu 0.05 --sigma 0.2 --T 1.0 --N 100 --output gbm_plot.png
 
 The `--y0`, `--mu`, and `--sigma` arguments are required, while the program will default a `--T` to 10, `--N` to 100 and `output` to "output.png"
 
@@ -64,7 +64,7 @@ For example:
     simulator = GBMSimulator(y0, mu, sigma)
 
     # Simulate path
-    t_values, y_values = simulator.simulate_path(T, N)
+    t_values, y_values = simulator.simulate_path_analytical(T, N)
 
     # Plot the simulated path
     plt.plot(t_values , y_values , label ="GBM Path")
