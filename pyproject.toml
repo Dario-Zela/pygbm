@@ -4,8 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dz339-pygbm" # name of the package must match the core folder name
-#dynamic = ["version"]
-version = "1.0"
+dynamic = ["version"]
 description = "A python package to create simulations of geometric browninan motion."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -36,6 +35,8 @@ pygbm = "pygbm.cli:main"
 
 [tool.setuptools_scm]
 write_to = "pygbm/version.py"  # Where to write the dynamic version
+version_scheme = "post-release"
+local_scheme = "no-local-version"
 
 [tool.setuptools.packages.find]
 where = ["."]
