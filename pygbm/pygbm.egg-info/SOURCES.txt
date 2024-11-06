@@ -5,6 +5,9 @@ README.md
 make.bat
 pyproject.toml
 requirements.txt
+dist/pygbm-0.1.dev40+g33c766a.d20241031-py3-none-any.whl
+dist/pygbm-0.1.dev40+g33c766a.d20241031.tar.gz
+pygbm/__init__.py
 pygbm/cli.py
 pygbm/gbm_simulator.py
 pygbm/version.py
@@ -16,11 +19,6 @@ pygbm.egg-info/requires.txt
 pygbm.egg-info/top_level.txt
 pygbm/__pycache__/cli.cpython-313.pyc
 pygbm/__pycache__/gbm_simulator.cpython-313.pyc
-pygbm/pygbm/cli.py
-pygbm/pygbm/gbm_simulator.py
-pygbm/pygbm/version.py
-pygbm/source/conf.py
-pygbm/tests/test.py
 source/api.rst
 source/conf.py
 source/index.rst
