@@ -5,6 +5,7 @@ README.md
 make.bat
 pyproject.toml
 requirements.txt
+.github/workflows/python-publish.yml
 pygbm/cli.py
 pygbm/gbm_simulator.py
 pygbm/version.py
@@ -14,13 +15,6 @@ pygbm.egg-info/dependency_links.txt
 pygbm.egg-info/entry_points.txt
 pygbm.egg-info/requires.txt
 pygbm.egg-info/top_level.txt
-pygbm/__pycache__/cli.cpython-313.pyc
-pygbm/__pycache__/gbm_simulator.cpython-313.pyc
-pygbm/pygbm/cli.py
-pygbm/pygbm/gbm_simulator.py
-pygbm/pygbm/version.py
-pygbm/source/conf.py
-pygbm/tests/test.py
 source/api.rst
 source/conf.py
 source/index.rst

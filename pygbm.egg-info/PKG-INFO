@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pygbm
-Version: 0.1.dev43+g4f4902d.d20241106
+Version: 1.0
 Summary: A python package to create simulations of geometric browninan motion.
 Author-email: Dario Zela <dz339@cam.ac.uk>
 License: Copyright (c)  
@@ -27,11 +27,8 @@ Project-URL: Documentation, https://pygbmdariodis2024.readthedocs.io/en/latest/#
 Project-URL: Source, https://github.com/Dario-Zela/pygbm
 Project-URL: Issues, https://github.com/Dario-Zela/pygbm/issues
 Keywords: Geometric Brownian Motion,physics,simualtion
-Classifier: Development Status :: 1 - Beta
-Classifier: Intended Audience :: Physicists
+Classifier: Development Status :: 4 - Beta
 Classifier: License :: OSI Approved :: MIT License
-Classifier: Programming Language :: Python :: 3
-Classifier: Topic :: Software Development :: Libraries
 Requires-Python: >=3.12
 Description-Content-Type: text/markdown
 License-File: LICENSE

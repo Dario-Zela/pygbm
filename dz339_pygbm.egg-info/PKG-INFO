@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: pygbm
-Version: 0.1.dev41+g55278b8.d20241106
+Name: dz339-pygbm
+Version: 1.0
 Summary: A python package to create simulations of geometric browninan motion.
 Author-email: Dario Zela <dz339@cam.ac.uk>
 License: Copyright (c)  
@@ -27,11 +27,8 @@ Project-URL: Documentation, https://pygbmdariodis2024.readthedocs.io/en/latest/#
 Project-URL: Source, https://github.com/Dario-Zela/pygbm
 Project-URL: Issues, https://github.com/Dario-Zela/pygbm/issues
 Keywords: Geometric Brownian Motion,physics,simualtion
-Classifier: Development Status :: 1 - Beta
-Classifier: Intended Audience :: Physicists
+Classifier: Development Status :: 4 - Beta
 Classifier: License :: OSI Approved :: MIT License
-Classifier: Programming Language :: Python :: 3
-Classifier: Topic :: Software Development :: Libraries
 Requires-Python: >=3.12
 Description-Content-Type: text/markdown
 License-File: LICENSE
@@ -70,7 +67,7 @@ N = 100
 simulator = GBMSimulator(y0, mu, sigma )
 
 # Simulate path
-t_values, y_values = simulator.simulate_path(T, N)
+t_values, y_values = simulator.simulate_path_analytical(T, N)
 
 # Plot the simulated path
 plt.plot(t_values , y_values , label ="GBM Path")
@@ -81,9 +78,9 @@ plt.legend()
 plt.show()
 ```
 
-This program can also be run on the cli by using the pygbm simulate command, as below
+This program can also be run on the cli by using the pygbm command, with the method subargument, as below
 ```bash
-pygbm simulate --y0 1.0 --mu 0.05 --sigma 0.2 --T 1.0 --N 100 --output gbm_plot.png
+pygbm euler --y0 1.0 --mu 0.05 --sigma 0.2 --T 1.0 --N 100 --output gbm_plot.png
 ```
 
 ## Documentation
